@@ -1,5 +1,4 @@
 zone:
-  name: "domain.tld" # your OVH registered domain
-  subdomain: "subdomain" # subdomain whose dns record to update
+  subdomain: "sub.domain.tld" # subdomain whose dns record to update
   user: "domain.tld-id" # authentication user-id you set
-  password: "changeme" # the corresponding password
+  pass: "changeme" # the corresponding password
