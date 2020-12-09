@@ -1,4 +1,7 @@
 /config.yml
+/config.yml.bak
 /.env
-/go_build_go_dyndns_ovh_
-/bin/
+/.env.bak
+/bin/.env.bak
+
+

@@ -19,12 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f069239-07dd-4dc4-a131-0314674d3134" name="Default Changelist" comment="Client successfully updates the DNS record if the config file values are set correctly.">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="4f069239-07dd-4dc4-a131-0314674d3134" name="Default Changelist" comment="Client successfully updates the DNS record if the config file values are set correctly.&#10;Added TODO items.&#10;Added Dockerfile.">
+      <change beforePath="$PROJECT_DIR$/.env.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/.env.tmpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/go-dyndns-ovh.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dyndns-ovh.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.tmpl.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.tmpl.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-dyndns-ovh.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-dyndns-ovh.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-dyndns-ovh.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +57,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build dyndns-ovh.go">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="go-dyndns-ovh" />
+      <module name="dyndns-ovh" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
       <kind value="DIRECTORY" />
@@ -70,18 +72,51 @@
       <output_directory value="$PROJECT_DIR$/bin" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-dyndns-ovh.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-dyndns-ovh" />
+    <configuration name="go build dyndns-ovh.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="dyndns-ovh" />
       <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-o ./bin/ovh-dyndns" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/go-dyndns-ovh.go" />
+      <filePath value="$PROJECT_DIR$/dyndns-ovh.go" />
       <directory value="$PROJECT_DIR$" />
       <output_directory value="$PROJECT_DIR$/bin" />
       <method v="2" />
     </configuration>
+    <configuration name="dyndns-ovh/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="dyndns-ovh" />
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="dyndns-ovh-updater" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="../dyndns-ovh/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2">
+        <option name="RunConfigurationTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Docker.dyndns-ovh/Dockerfile" />
+      <item itemvalue="Go Build.go build dyndns-ovh.go" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go-dyndns-ovh.go" />
+        <item itemvalue="Go Build.go build dyndns-ovh.go" />
+        <item itemvalue="Docker.dyndns-ovh/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -94,6 +129,14 @@
       <option name="presentableId" value="Default" />
       <updated>1607425510965</updated>
     </task>
+    <task id="LOCAL-00001" summary="Client successfully updates the DNS record if the config file values are set correctly.&#10;Added TODO items.&#10;Added Dockerfile.">
+      <created>1607453910555</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607453910555</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,37 +156,50 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Client successfully updates the DNS record if the config file values are set correctly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Client successfully updates the DNS record if the config file values are set correctly." />
+    <MESSAGE value="Client successfully updates the DNS record if the config file values are set correctly.&#10;Added TODO items.&#10;Added Dockerfile." />
+    <option name="LAST_COMMIT_MESSAGE" value="Client successfully updates the DNS record if the config file values are set correctly.&#10;Added TODO items.&#10;Added Dockerfile." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1075" y="666" width="410" height="141" key="#GOROOT" timestamp="1607430193604">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1075" y="666" width="410" height="141" key="#GOROOT/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607430193604" />
-    <state x="738" y="392" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607448990302">
+    <state x="1306" y="288" width="1084" height="736" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607509914138">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="738" y="392" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607448990302" />
-    <state x="995" y="535" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607431147588">
+    <state x="1306" y="288" width="1084" height="736" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607509914138" />
+    <state x="995" y="535" width="624" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607507083925">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="995" y="535" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607431147588" />
+    <state x="995" y="535" width="624" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607507083925" />
+    <state x="712" y="491" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1607505765786">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="712" y="491" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607505765786" />
     <state x="1037" y="440" width="476" height="594" key="#com.intellij.ide.util.MemberChooser" timestamp="1607448001307">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1037" y="440" width="476" height="594" key="#com.intellij.ide.util.MemberChooser/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607448001307" />
+    <state x="1013" y="482" width="524" height="510" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607505487504">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="1013" y="482" width="524" height="510" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607505487504" />
+    <state x="681" y="613" width="486" height="518" key="#com.intellij.tools.ToolEditorDialog" timestamp="1607505473093">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="681" y="613" width="486" height="518" key="#com.intellij.tools.ToolEditorDialog/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607505473093" />
     <state x="933" y="856" width="524" height="306" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1607449458836">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="933" y="856" width="524" height="306" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607449458836" />
-    <state x="1115" y="499" width="320" height="501" key="EnvironmentVariablesDialog" timestamp="1607448988299">
+    <state x="1115" y="499" width="320" height="508" key="EnvironmentVariablesDialog" timestamp="1607509912560">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="1115" y="499" width="320" height="501" key="EnvironmentVariablesDialog/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607448988299" />
-    <state x="1063" y="492" width="424" height="491" key="FileChooserDialogImpl" timestamp="1607436067052">
+    <state x="1115" y="499" width="320" height="508" key="EnvironmentVariablesDialog/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607509912560" />
+    <state x="1063" y="492" width="424" height="491" key="FileChooserDialogImpl" timestamp="1607509368616">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="1063" y="492" width="424" height="491" key="FileChooserDialogImpl/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607436067052" />
+    <state x="1063" y="492" width="424" height="491" key="FileChooserDialogImpl/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607509368616" />
     <state x="1117" y="633" width="325" height="207" key="Github.ShareDialog" timestamp="1607425625853">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -152,52 +208,49 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1051" y="420" width="448" height="633" key="Github.UntrackedFilesDialog/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607425639341" />
-    <state width="1354" height="258" key="GridCell.Tab.0.bottom" timestamp="1607453702981">
+    <state width="1257" height="484" key="GridCell.Tab.0.bottom" timestamp="1607510659582">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state width="1354" height="258" key="GridCell.Tab.0.bottom/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607453702981" />
-    <state width="1354" height="258" key="GridCell.Tab.0.center" timestamp="1607453702981">
+    <state width="1257" height="484" key="GridCell.Tab.0.bottom/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607510659582" />
+    <state width="1257" height="484" key="GridCell.Tab.0.center" timestamp="1607510659582">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state width="1354" height="258" key="GridCell.Tab.0.center/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607453702981" />
-    <state width="1354" height="258" key="GridCell.Tab.0.left" timestamp="1607453702981">
+    <state width="1257" height="484" key="GridCell.Tab.0.center/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607510659582" />
+    <state width="1257" height="484" key="GridCell.Tab.0.left" timestamp="1607510659582">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state width="1354" height="258" key="GridCell.Tab.0.left/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607453702981" />
-    <state width="1354" height="258" key="GridCell.Tab.0.right" timestamp="1607453702981">
+    <state width="1257" height="484" key="GridCell.Tab.0.left/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607510659582" />
+    <state width="1257" height="484" key="GridCell.Tab.0.right" timestamp="1607510659582">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state width="1354" height="258" key="GridCell.Tab.0.right/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607453702981" />
-    <state width="1354" height="319" key="GridCell.Tab.1.bottom" timestamp="1607452744620">
+    <state width="1257" height="484" key="GridCell.Tab.0.right/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607510659582" />
+    <state width="1257" height="484" key="GridCell.Tab.1.bottom" timestamp="1607510660687">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state width="1354" height="319" key="GridCell.Tab.1.bottom/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607452744620" />
-    <state width="1354" height="319" key="GridCell.Tab.1.center" timestamp="1607452744620">
+    <state width="1257" height="484" key="GridCell.Tab.1.bottom/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607510660687" />
+    <state width="1257" height="484" key="GridCell.Tab.1.center" timestamp="1607510660687">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state width="1354" height="319" key="GridCell.Tab.1.center/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607452744620" />
-    <state width="1354" height="319" key="GridCell.Tab.1.left" timestamp="1607452744620">
+    <state width="1257" height="484" key="GridCell.Tab.1.center/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607510660687" />
+    <state width="1257" height="484" key="GridCell.Tab.1.left" timestamp="1607510660687">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state width="1354" height="319" key="GridCell.Tab.1.left/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607452744620" />
-    <state width="1354" height="319" key="GridCell.Tab.1.right" timestamp="1607452744620">
+    <state width="1257" height="484" key="GridCell.Tab.1.left/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607510660687" />
+    <state width="1257" height="484" key="GridCell.Tab.1.right" timestamp="1607510660687">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state width="1354" height="319" key="GridCell.Tab.1.right/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607452744620" />
+    <state width="1257" height="484" key="GridCell.Tab.1.right/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607510660687" />
     <state x="863" y="479" width="824" height="515" key="IDE.errors.dialog" timestamp="1607428014551">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="863" y="479" width="824" height="515" key="IDE.errors.dialog/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607428014551" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/go-dyndns-ovh.go</url>
-          <line>87</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="1081" y="604" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1607453919454">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="1081" y="604" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607453919454" />
+    <state x="807" y="562" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1607505474388">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="807" y="562" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.27.2560.1413/2560.360.1920.1080@0.27.2560.1413" timestamp="1607505474388" />
   </component>
 </project>
