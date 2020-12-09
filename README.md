@@ -17,19 +17,26 @@ Clone this repository, change directory and copy configuration template:
 ```bash
 git clone https://github.com/codefuzzler/go-dyndns-ovh.git && \
 cd go-dyndns-ovh && \
-cp config.tmpl.yml config.yml
 ```
 
+### Use as a Docker container
+```bash
+docker run -it -e OVH_DNS_RECORD=sub.domain.tld \
+               -e OVH_DNS_USER=domain.tld-id \
+               -e OVH_DNS_PASS=changeme \
+                codefuzzler/ovh-dyndns:latest
+```
 
 ## Usage
 To configure the tool to update the DNS Record for the subdomain "example.domain.tld" either:
-* edit the config.yml
 * set the following environment variables:
+* Copy the .env.tmpl file to .env and edit it
+
 ```bash
-export OVH_ZONE_NAME=domain.tld
-export OVH_ZONE_SUBDOMAIN=example
-export OVH_ZONE_USER=domain.tld-id
-export OVH_ZONE_PASSWORD=changeme
+export OVH_DNS_RECORD=sub.domain.tld
+export OVH_DNS_USER=domain.tld-id
+export OVH_DNS_PASS=changeme
+export OVH_DNS_LOOP=0 # milliseconds to wait before executing again, set to 0 for single execution
 ```
 
 

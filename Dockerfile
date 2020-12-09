@@ -3,5 +3,5 @@
 FROM alpine:latest
 LABEL maintainer="Jerome Grassnick <grassnick@pm.me>"
 WORKDIR /bin
-COPY ./bin/ovh-dyndns /bin
-COPY .env /bin/.env
+COPY ./bin/ovh-dyndns /bin/ovh-dyndns
+CMD ["/bin/ovh-dyndns"]

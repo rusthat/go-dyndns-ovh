@@ -1,7 +1,4 @@
 /config.yml
 /config.yml.bak
 /.env
-/.env.bak
-/bin/.env.bak
-
-
+/bin/.env

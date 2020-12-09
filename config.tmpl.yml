@@ -1,4 +1,0 @@
-zone:
-  subdomain: "sub.domain.tld" # subdomain whose dns record to update
-  user: "domain.tld-id" # authentication user-id you set
-  pass: "changeme" # the corresponding password
